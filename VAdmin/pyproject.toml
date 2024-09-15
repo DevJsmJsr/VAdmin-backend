@@ -15,6 +15,10 @@ django-rest-polymorphic = "^0.1.10"
 djangorestframework-datatables = "^0.7.2"
 psycopg2-binary = "^2.9.9"
 zappa = "^0.59.0"
+django-rest-passwordreset = "^1.4.1"
+djangorestframework-simplejwt = "^5.3.1"
+coreapi = "^2.3.3"
+botocore = "^1.35.19"
 
 [tool.poetry.group.dev.dependencies]
 python = "^3.11"
@@ -27,6 +31,9 @@ django-rest-polymorphic = "^0.1.10"
 djangorestframework-datatables = "^0.7.2"
 psycopg2-binary = "^2.9.9"
 zappa = "^0.59.0"
+djangorestframework-simplejwt = "^5.3.1"
+coreapi = "^2.3.3"
+botocore = "^1.35.19"
 
 [build-system]
 requires = ["poetry-core"]

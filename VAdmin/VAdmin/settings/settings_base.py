@@ -9,10 +9,12 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+from corsheaders.defaults import default_headers
+from pathlib import Path
+import boto3
 import datetime
 import os
-import boto3
-from pathlib import Path
+import psycopg2.extensions
 
 # Environment
 ENV = os.environ['ENV']
@@ -52,11 +54,9 @@ DJANGO_APPS = [
 
 THIRD_APPS = [
   'corsheaders',
-  'storages',
+  #'storages',
   'rest_framework',
   'rest_framework.authtoken',
-  'social.apps.django_app.default',
-  'social_django',
   'django_filters',
   'django_rest_passwordreset',
   'django.contrib.postgres',
@@ -193,4 +193,4 @@ REST_FRAMEWORK = {
 
 # Substituting a custom User model
 # https://docs.djangoproject.com/en/3.1/topics/auth/customizing
-AUTH_USER_MODEL = "core.User"
+#AUTH_USER_MODEL = "core.User"
