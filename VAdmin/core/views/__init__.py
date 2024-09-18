@@ -1,0 +1,1 @@
+from core.views.taller_api_view import TallerAPIView
