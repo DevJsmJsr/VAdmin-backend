@@ -64,6 +64,7 @@ THIRD_APPS = [
 
 LOCAL_APPS = [
   'core.apps.CoreConfig',
+  'auto_workshop.apps.AutoWorkshopConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + LOCAL_APPS
@@ -193,4 +194,4 @@ REST_FRAMEWORK = {
 
 # Substituting a custom User model
 # https://docs.djangoproject.com/en/3.1/topics/auth/customizing
-#AUTH_USER_MODEL = "core.User"
+AUTH_USER_MODEL = "core.User"

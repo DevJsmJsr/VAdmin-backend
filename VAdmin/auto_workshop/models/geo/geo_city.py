@@ -1,7 +1,7 @@
 from django.db import models
 
 from core.models.auditor import Auditor
-from core.models.geo.geo_state import GeoState
+from auto_workshop.models.geo.geo_state import GeoState
 
 
 class GeoCity(Auditor):

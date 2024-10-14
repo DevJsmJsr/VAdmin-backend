@@ -14,4 +14,4 @@ class User(AbstractUser, Auditor):
   ]
 
   email = models.EmailField(unique=True)
-  rol=models.CharField(max_length=10, choices=ROL_CHOICES)
+  rol=models.CharField(max_length=14, choices=ROL_CHOICES)
