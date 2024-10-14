@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from core.models import AutoWorkshop
+from core.models import Garage
 
-class AutoWorkshopSerializer(serializers.Serializer):
+class GarageSerializer(serializers.Serializer):
   class Meta:
-    model = AutoWorkshop
+    model = Garage
     fields = ['name','phone','id']
     datatables_always_serialize = fields

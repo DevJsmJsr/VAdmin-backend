@@ -3,9 +3,8 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-class AutoWorkshop(models.Model):
-  name = models.CharField(max_length=50)
-  address = models.CharField(max_length=50)
+class Garage(models.Model):
+  name = models.CharField(max_length=200)
   phone = models.CharField(max_length=50)
   email = models.EmailField()
   nit = models.CharField()

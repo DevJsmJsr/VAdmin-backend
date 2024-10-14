@@ -1,1 +1,1 @@
-from core.serializers.auto_workshop_serializer import AutoWorkshopSerializer
+from core.serializers.garage_serializer import GarageSerializer

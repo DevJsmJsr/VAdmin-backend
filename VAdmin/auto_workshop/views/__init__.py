@@ -1,1 +1,1 @@
-from core.views.auto_workshop_api_view import AutoWorkshopAPIView
+from core.views.garage_api_view import GarageAPIView
