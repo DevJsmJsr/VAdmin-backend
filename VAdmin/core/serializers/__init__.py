@@ -1,0 +1,3 @@
+from core.serializers.person_serializer import PersonSerializer
+from core.serializers.property_card_serializer import PropertyCardSerializer
+from core.serializers.vehicle_serializer import VehicleSerializer

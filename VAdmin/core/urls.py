@@ -1,7 +1,8 @@
 from django.urls import path
 
-from core import views
+from .views import PersonListAPIView,PropertyCardAPIView
 
 urlpatterns = [
-  #path('listar-talleres/', views.TallerAPIView.as_view(), name='taller')
+    path('persons/', PersonListAPIView.as_view(), name='persons'),
+    path('property-cards/', PropertyCardAPIView.as_view(), name='property-cards'),
 ]
