@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from core.models import Taller
+from core.models import AutoWorkshop
 
-class TallerSerializer(serializers.Serializer):
+class AutoWorkshopSerializer(serializers.Serializer):
   class Meta:
-    model = Taller
+    model = AutoWorkshop
     fields = ['name','phone','id']
     datatables_always_serialize = fields

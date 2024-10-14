@@ -1,0 +1,1 @@
+from core.serializers.auto_workshop_serializer import AutoWorkshopSerializer
