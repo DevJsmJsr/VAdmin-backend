@@ -1,0 +1,28 @@
+{
+  "prod": {
+    "environment_variables": {
+      "ENV": "prod",
+      "SECRET_KEY": "django-insecure-j7@nvw1dn201i-8@juk$dz0p2jgn&=__7vlnh(0h=t7x0l2*n+",
+      "DB_DATABASE": "vadminbd",
+      "DB_USERNAME": "app_vadmin",
+      "DB_PASSWORD": "il%a8zZc84X@",
+      "DB_HOST": "vadminbd.clgiuw4609ba.us-east-1.rds.amazonaws.com",
+      "DB_PORT": "5432",
+      "URL_FRONTEND": "https://vadmin.com.co",
+      "REGION": "us-east-1",
+      "STORAGE_BUCKET_NAME": "vadmin.static",
+      "STORAGE_BUCKET_NAME_PRIVATE": "vadmin.media"
+    },
+    "django_settings": "VAdmin.settings",
+    "exclude": ["boto3", "dateutil", "botocore", "s3transfer", "concurrent"],
+    "profile_name": null,
+    "project_name": "vadmin",
+    "runtime": "python3.11"
+  },
+  "prod_us_east_1": {
+    "domain": "api.vadmin.com.co",
+    "extends": "prod",
+    "s3_bucket": "vadmin-backend",
+    "aws_region": "us-east-1"
+  }
+}
