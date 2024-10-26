@@ -3,3 +3,6 @@ from core.models.user import User
 from core.models.person import Person
 from core.models.property_card import PropertyCard
 from core.models.vehicle import Vehicle
+from core.models.phone import Phone
+from core.models.vehicle_engine import VehicleEngine
+from core.models.vehicle_accessories import VehicleAccessories

@@ -1,1 +1,2 @@
 from core.serializers.garage_serializer import GarageSerializer
+from core.serializers.employee_serializer import EmployeeSerializer

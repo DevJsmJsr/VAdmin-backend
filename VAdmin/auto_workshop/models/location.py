@@ -2,7 +2,6 @@ from django.db import models
 
 from core.models import Auditor
 from auto_workshop.models import GeoCity
-from auto_workshop.models import GeoState
 
 
 class Location(Auditor):
@@ -16,7 +15,6 @@ class Location(Auditor):
   observation = models.TextField(null=True)
   reference = models.ForeignKey('Reference', on_delete=models.CASCADE, null=True)
   geo_city = models.ForeignKey(GeoCity, on_delete=models.CASCADE, null=True)
-  geo_state = models.ForeignKey(GeoState, on_delete=models.CASCADE, null=True)
   garage = models.ForeignKey(
     'Garage', on_delete=models.CASCADE, related_name='garage_location'
   )

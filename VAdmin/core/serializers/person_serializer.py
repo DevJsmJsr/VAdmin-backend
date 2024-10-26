@@ -4,4 +4,7 @@ from core.models import Person
 class PersonSerializer(serializers.ModelSerializer):
   class Meta:
     model = Person
-    fields = ['first_name', 'second_name', 'first_lastname', 'second_lastname', 'uuid', 'user']
+    fields = ['uuid','first_name','middle_name','last_name',
+              'second_last_name','gender','birth_date',
+              'document_number','document_type'
+            ]

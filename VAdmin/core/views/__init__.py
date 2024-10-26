@@ -1,3 +1,5 @@
 from core.views.person_api_view import PersonListAPIView
 from core.views.property_card_api_view import PropertyCardAPIView
 from core.views.vehicle_api_view import VehicleAPIView
+from core.views.vehicle_engine_api_view import VehicleEngineListCreateView, VehicleEngineRetrieveUpdateDestroyView
+from core.views.vehicle_accessories_api_view import VehicleAccessoriesListCreateView, VehicleAccessoriesRetrieveUpdateDestroyView

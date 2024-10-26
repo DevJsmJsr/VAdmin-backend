@@ -1,1 +1,2 @@
-from core.views.garage_api_view import GarageAPIView
+from auto_workshop.views.garage_api_view import GarageAPIView
+from auto_workshop.views.employee_api_view import EmployeeListCreateView

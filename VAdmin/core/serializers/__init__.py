@@ -1,3 +1,6 @@
 from core.serializers.person_serializer import PersonSerializer
 from core.serializers.property_card_serializer import PropertyCardSerializer
 from core.serializers.vehicle_serializer import VehicleSerializer
+from core.serializers.phone_serializer import PhoneSerializer
+from core.serializers.vehicle_engine_serializer import VehicleEngineSerializer
+from core.serializers.vehicle_accessories_serializer import VehicleAccessoriesSerializer
