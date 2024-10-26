@@ -6,3 +6,4 @@ from core.models.vehicle import Vehicle
 from core.models.phone import Phone
 from core.models.vehicle_engine import VehicleEngine
 from core.models.vehicle_accessories import VehicleAccessories
+from core.models.review import Review
