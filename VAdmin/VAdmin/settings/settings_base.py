@@ -195,3 +195,8 @@ REST_FRAMEWORK = {
 # Substituting a custom User model
 # https://docs.djangoproject.com/en/3.1/topics/auth/customizing
 AUTH_USER_MODEL = "core.User"
+
+
+#AZURE ENDPOINTS
+AZURE_SECRET_KEY = os.environ['AZURE_SECRET_KEY']
+AZURE_MODEL_ENDPOINT = os.environ['AZURE_MODEL_ENDPOINT']
