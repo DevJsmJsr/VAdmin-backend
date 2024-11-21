@@ -5,3 +5,4 @@ from core.serializers.phone_serializer import PhoneSerializer
 from core.serializers.vehicle_engine_serializer import VehicleEngineSerializer
 from core.serializers.vehicle_accessories_serializer import VehicleAccessoriesSerializer
 from core.serializers.review_serializer import ReviewSerializer
+from core.serializers.user_serializer import UserSerializer

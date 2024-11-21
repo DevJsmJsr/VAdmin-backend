@@ -3,9 +3,11 @@ from django.urls import path
 from .views import (PersonListAPIView,PropertyCardAPIView, VehicleAPIView,
                     VehicleEngineListCreateView, VehicleEngineRetrieveUpdateDestroyView,
                     VehicleAccessoriesListCreateView, VehicleAccessoriesRetrieveUpdateDestroyView,
-                    ReviewListCreateView, ReviewRetrieveUpdateDestroyView, GetOrCreatePropertyCardView)
+                    ReviewListCreateView, ReviewRetrieveUpdateDestroyView, GetOrCreatePropertyCardView,
+                    UserListCreateAPIView)
 
 urlpatterns = [
+    path("users/", UserListCreateAPIView.as_view(), name='users'),
     path('persons/', PersonListAPIView.as_view(), name='persons'),
     path('property-cards/', PropertyCardAPIView.as_view(), name='property-cards'),
     path('vehicle/', VehicleAPIView.as_view(), name='vehicle'),

@@ -38,9 +38,12 @@ ALLOWED_HOSTS = ['localhost','vrbs8k12vg.execute-api.us-east-1.amazonaws.com']
 URL_FRONTEND = os.environ['URL_FRONTEND']
 
 CORS_ORIGIN_WHITELIST = (
-  URL_FRONTEND,
+  URL_FRONTEND, 'https://localhost'
 )
 
+CORS_ALLOW_HEADERS = list(default_headers) + [
+  'cache-control'
+]
 # Application definition
 
 DJANGO_APPS = [
@@ -72,6 +75,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + LOCAL_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

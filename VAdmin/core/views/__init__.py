@@ -5,3 +5,4 @@ from core.views.vehicle_engine_api_view import VehicleEngineListCreateView, Vehi
 from core.views.vehicle_accessories_api_view import VehicleAccessoriesListCreateView, VehicleAccessoriesRetrieveUpdateDestroyView
 from core.views.review_api_view import ReviewListCreateView, ReviewRetrieveUpdateDestroyView
 from core.views.read_property_card import GetOrCreatePropertyCardView
+from core.views.user_api_view import UserListCreateAPIView
