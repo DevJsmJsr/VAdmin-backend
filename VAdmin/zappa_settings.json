@@ -9,8 +9,8 @@
       "DB_HOST": "vadminbd.clgiuw4609ba.us-east-1.rds.amazonaws.com",
       "DB_PORT": "5432",
       "URL_FRONTEND": "https://vadmin.com.co",
-      "AZURE_MODEL_ENDPOINT":"https://di-property-card.cognitiveservices.azure.com/formrecognizer/documentModels/ownership_card_v2:analyze?api-version=2023-07-31",
-      "AZURE_SECRET_KEY": "fccc18749f88440b8643f57ea762edb7",
+      "AZURE_MODEL_ANALYZER_ENDPOINT":"https://azure-di-dl.cognitiveservices.azure.com/formrecognizer/documentModels/version2:analyze?api-version=2023-07-31",
+      "AZURE_SECRET_KEY": "BZucimbqngLoyLDXvroEOX0fskII1tyMrRYp6G2gveHMDpw3FTSeJQQJ99AKACYeBjFXJ3w3AAALACOGQZIy",
       "REGION": "us-east-1",
       "STORAGE_BUCKET_NAME": "vadmin.static",
       "STORAGE_BUCKET_NAME_PRIVATE": "vadmin.media"
