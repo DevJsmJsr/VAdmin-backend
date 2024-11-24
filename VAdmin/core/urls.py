@@ -3,7 +3,7 @@ from django.urls import path
 from .views import (PersonListAPIView,PropertyCardAPIView, VehicleAPIView,
                     VehicleEngineListCreateView, VehicleEngineRetrieveUpdateDestroyView,
                     VehicleAccessoriesListCreateView, VehicleAccessoriesRetrieveUpdateDestroyView,
-                    ReviewListCreateView, ReviewRetrieveUpdateDestroyView, GetOrCreatePropertyCardView,
+                    ReviewListCreateView, ReviewRetrieveUpdateDestroyView, ReadPropertyCardAPIView,
                     UserListCreateAPIView)
 
 urlpatterns = [
@@ -17,5 +17,5 @@ urlpatterns = [
     path('vehicle-accessories/<int:pk>/', VehicleAccessoriesRetrieveUpdateDestroyView.as_view(), name='vehicle-accessories-detail'),
     path('reviews/', ReviewListCreateView.as_view(), name='review-list-create'),
     path('reviews/<int:pk>/', ReviewRetrieveUpdateDestroyView.as_view(), name='review-detail'),
-    path('read-property-card/', GetOrCreatePropertyCardView.as_view(), name='review-detail'),
+    path('read-property-card/', ReadPropertyCardAPIView.as_view(), name='review-detail'),
 ]
