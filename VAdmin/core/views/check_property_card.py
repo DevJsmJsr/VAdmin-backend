@@ -13,26 +13,28 @@ from core.serializers import PersonSerializer, VehicleSerializer, PropertyCardSe
 
 class CheckPropertyCardAPIView(APIView):
   def get(self, request, *args, **kwargs):
-    #azure_uuid = request.GET.get("azure_request_uuid")
-    response = self.check_property_card('azure_uuid')
+    azure_uuid = request.GET.get("azure_request_uuid")
+    response = self.check_property_card(azure_uuid)
     if response:
-      self.create_person(response)
+      response = self.create_person(response)
+      return Response({
+        'data': response,
+      })
     
     return Response({
-      'data': response,
+      'data': "Data could not be found",
     })
     
   def check_property_card(self, azure_uuid: str)-> dict:
-    print("***************check_property_card******************")
     url = settings.AZURE_MODEL_CHECK_ENDPOINT
     url = url.replace("azure_request_uuid",f"{azure_uuid}")
     headers = {
       'Ocp-Apim-Subscription-Key': settings.AZURE_SECRET_KEY,
       'Content-Type': 'application/json'
     }
-    """ response = requests.request("GET", url, headers=headers)
+    response = requests.request("GET", url, headers=headers)
     response.raise_for_status()
-    response = response.json() """
+    response = response.json()
     response = settings.PC_EXAMPLE
     return response
   
@@ -41,8 +43,8 @@ class CheckPropertyCardAPIView(APIView):
     identification = fields['id_propietario']['content'].split(' ')
     
     user = User(username=identification[1], email='newUser@vadmin.com',
-                rol="USER", first_name=fields['nombre_propietario']['content'],
-                password=identification[1])
+            rol="USER", first_name=fields['nombre_propietario']['content'],
+            password=identification[1])
     user.save()
     
     person_obj = self.create_person_obj(fields, identification[0], identification[1], user)
@@ -50,7 +52,8 @@ class CheckPropertyCardAPIView(APIView):
     vehicle_obj = self.create_vehicle_obj(fields, pc_obj)
     
     if person_obj and vehicle_obj and pc_obj:
-        print("ALLL WAS OK")
+        return f"Person {person_obj.name} 
+          was created with vehicle {vehicle_obj.plate}, was created!"
     else:
       return "One object was not created"
     
