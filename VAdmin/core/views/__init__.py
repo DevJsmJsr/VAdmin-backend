@@ -6,3 +6,4 @@ from core.views.vehicle_accessories_api_view import VehicleAccessoriesListCreate
 from core.views.review_api_view import ReviewListCreateView, ReviewRetrieveUpdateDestroyView
 from core.views.read_property_card import ReadPropertyCardAPIView
 from core.views.user_api_view import UserListCreateAPIView
+from core.views.check_property_card import CheckPropertyCardAPIView

@@ -5,9 +5,12 @@ from django.utils.module_loading import import_string
 
 class PropertyCardSerializer(serializers.ModelSerializer):
   person = serializers.PrimaryKeyRelatedField(read_only=True)
-  person_uuid = serializers.UUIDField(write_only=True)
+  person_id = serializers.UUIDField(write_only=True)
   vehicle = serializers.PrimaryKeyRelatedField(read_only=True)
-  vehicle_id = serializers.IntegerField(write_only=True)
+  vehicle_id = serializers.IntegerField(write_only=True, required=False)
+  issue_date = serializers.CharField(required=False)
+  enrollment_date = serializers.CharField(required=False)
+  transit_authority = serializers.CharField(required=False)
   
   class Meta:
     model = import_string('core.models.PropertyCard')
@@ -17,7 +20,7 @@ class PropertyCardSerializer(serializers.ModelSerializer):
       'enrollment_date',
       'transit_authority',
       'person',
-      'person_uuid',
+      'person_id',
       'vehicle',
       'vehicle_id'
     ]

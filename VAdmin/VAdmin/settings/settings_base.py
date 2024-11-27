@@ -204,3 +204,4247 @@ AUTH_USER_MODEL = "core.User"
 #AZURE ENDPOINTS
 AZURE_SECRET_KEY = os.environ['AZURE_SECRET_KEY']
 AZURE_MODEL_ANALYZER_ENDPOINT = os.environ['AZURE_MODEL_ANALYZER_ENDPOINT']
+AZURE_MODEL_CHECK_ENDPOINT = os.environ['AZURE_MODEL_CHECK_ENDPOINT']
+
+
+
+PC_EXAMPLE = {
+    "status": "succeeded",
+    "createdDateTime": "2024-11-24T20:02:13Z",
+    "lastUpdatedDateTime": "2024-11-24T20:02:15Z",
+    "analyzeResult": {
+        "apiVersion": "2023-07-31",
+        "modelId": "version2",
+        "stringIndexType": "textElements",
+        "content": "REPÚBLICA DE COLOMBIA MINISTERIO DE TRANSPORTE\nLibertad y Orden LICENCIA DE TRÁNSITO No. 10013078672\nPLACA\nMARCA\nLÍNEA\nMODELO\nJFL262\nNISSAN\nQASHQAI\n2017\nCILINDRADA CC\nCOLOR\nSERVICIO\n1.997\nPLATA\nPARTICULAR\nCLASE DE VEHÍCULO\nTIPO CARROCERÍA\nCOMBUSTIBLE\nCAPACIDAD Kg/PSJ\nCAMIONETA\nWAGON\nGASOLINA\n5\nNÚMERO DE MOTOR\nREG\nVIN\nMR20438178W\nN\nSJNFBAJ11Z1825686\nNÚMERO DE SERIE\nREG NÚMERO DE CHASIS\nREG\nSJNFBAJ11Z1825686\nN\nSJNFBAJ11Z1825686\nN\nPROPIETARIO: APELLIDO(S) Y NOMBRE(S) ROJAS ROJAS EDWAR JAVIER\nIDENTIFICACIÓN C.C. 80228229",
+        "pages": [
+            {
+                "pageNumber": 1,
+                "angle": 0,
+                "width": 1599,
+                "height": 899,
+                "unit": "pixel",
+                "words": [
+                    {
+                        "content": "REPÚBLICA",
+                        "polygon": [
+                            567,
+                            232,
+                            839,
+                            246,
+                            838,
+                            293,
+                            566,
+                            283
+                        ],
+                        "confidence": 0.961,
+                        "span": {
+                            "offset": 0,
+                            "length": 9
+                        }
+                    },
+                    {
+                        "content": "DE",
+                        "polygon": [
+                            857,
+                            247,
+                            917,
+                            250,
+                            916,
+                            296,
+                            856,
+                            294
+                        ],
+                        "confidence": 0.978,
+                        "span": {
+                            "offset": 10,
+                            "length": 2
+                        }
+                    },
+                    {
+                        "content": "COLOMBIA",
+                        "polygon": [
+                            935,
+                            251,
+                            1175,
+                            263,
+                            1175,
+                            303,
+                            934,
+                            296
+                        ],
+                        "confidence": 0.967,
+                        "span": {
+                            "offset": 13,
+                            "length": 8
+                        }
+                    },
+                    {
+                        "content": "MINISTERIO",
+                        "polygon": [
+                            672,
+                            301,
+                            819,
+                            305,
+                            818,
+                            333,
+                            670,
+                            329
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 22,
+                            "length": 10
+                        }
+                    },
+                    {
+                        "content": "DE",
+                        "polygon": [
+                            832,
+                            305,
+                            864,
+                            306,
+                            863,
+                            334,
+                            830,
+                            333
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 33,
+                            "length": 2
+                        }
+                    },
+                    {
+                        "content": "TRANSPORTE",
+                        "polygon": [
+                            875,
+                            307,
+                            1043,
+                            313,
+                            1042,
+                            340,
+                            874,
+                            335
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 36,
+                            "length": 10
+                        }
+                    },
+                    {
+                        "content": "Libertad",
+                        "polygon": [
+                            395,
+                            366,
+                            448,
+                            367,
+                            449,
+                            391,
+                            395,
+                            391
+                        ],
+                        "confidence": 0.849,
+                        "span": {
+                            "offset": 47,
+                            "length": 8
+                        }
+                    },
+                    {
+                        "content": "y",
+                        "polygon": [
+                            453,
+                            367,
+                            461,
+                            368,
+                            461,
+                            391,
+                            453,
+                            391
+                        ],
+                        "confidence": 0.883,
+                        "span": {
+                            "offset": 56,
+                            "length": 1
+                        }
+                    },
+                    {
+                        "content": "Orden",
+                        "polygon": [
+                            466,
+                            368,
+                            511,
+                            369,
+                            511,
+                            392,
+                            466,
+                            391
+                        ],
+                        "confidence": 0.936,
+                        "span": {
+                            "offset": 58,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "LICENCIA",
+                        "polygon": [
+                            530,
+                            353,
+                            689,
+                            351,
+                            687,
+                            387,
+                            528,
+                            383
+                        ],
+                        "confidence": 0.971,
+                        "span": {
+                            "offset": 64,
+                            "length": 8
+                        }
+                    },
+                    {
+                        "content": "DE",
+                        "polygon": [
+                            703,
+                            351,
+                            744,
+                            351,
+                            743,
+                            389,
+                            701,
+                            388
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 73,
+                            "length": 2
+                        }
+                    },
+                    {
+                        "content": "TRÁNSITO",
+                        "polygon": [
+                            760,
+                            352,
+                            924,
+                            357,
+                            923,
+                            393,
+                            759,
+                            389
+                        ],
+                        "confidence": 0.992,
+                        "span": {
+                            "offset": 76,
+                            "length": 8
+                        }
+                    },
+                    {
+                        "content": "No.",
+                        "polygon": [
+                            938,
+                            358,
+                            994,
+                            361,
+                            993,
+                            395,
+                            937,
+                            394
+                        ],
+                        "confidence": 0.986,
+                        "span": {
+                            "offset": 85,
+                            "length": 3
+                        }
+                    },
+                    {
+                        "content": "10013078672",
+                        "polygon": [
+                            1092,
+                            376,
+                            1308,
+                            379,
+                            1308,
+                            412,
+                            1092,
+                            410
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 89,
+                            "length": 11
+                        }
+                    },
+                    {
+                        "content": "PLACA",
+                        "polygon": [
+                            368,
+                            433,
+                            432,
+                            433,
+                            432,
+                            455,
+                            368,
+                            454
+                        ],
+                        "confidence": 0.993,
+                        "span": {
+                            "offset": 101,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "MARCA",
+                        "polygon": [
+                            567,
+                            437,
+                            634,
+                            437,
+                            633,
+                            460,
+                            566,
+                            458
+                        ],
+                        "confidence": 0.994,
+                        "span": {
+                            "offset": 107,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "LÍNEA",
+                        "polygon": [
+                            883,
+                            440,
+                            933,
+                            440,
+                            933,
+                            463,
+                            883,
+                            463
+                        ],
+                        "confidence": 0.724,
+                        "span": {
+                            "offset": 113,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "MODELO",
+                        "polygon": [
+                            1238,
+                            449,
+                            1305,
+                            451,
+                            1305,
+                            467,
+                            1238,
+                            466
+                        ],
+                        "confidence": 0.993,
+                        "span": {
+                            "offset": 119,
+                            "length": 6
+                        }
+                    },
+                    {
+                        "content": "JFL262",
+                        "polygon": [
+                            372,
+                            461,
+                            482,
+                            463,
+                            482,
+                            490,
+                            372,
+                            489
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 126,
+                            "length": 6
+                        }
+                    },
+                    {
+                        "content": "NISSAN",
+                        "polygon": [
+                            567,
+                            463,
+                            677,
+                            464,
+                            677,
+                            493,
+                            567,
+                            493
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 133,
+                            "length": 6
+                        }
+                    },
+                    {
+                        "content": "QASHQAI",
+                        "polygon": [
+                            884,
+                            469,
+                            1021,
+                            469,
+                            1021,
+                            497,
+                            884,
+                            496
+                        ],
+                        "confidence": 0.948,
+                        "span": {
+                            "offset": 140,
+                            "length": 7
+                        }
+                    },
+                    {
+                        "content": "2017",
+                        "polygon": [
+                            1240,
+                            475,
+                            1300,
+                            475,
+                            1300,
+                            499,
+                            1240,
+                            499
+                        ],
+                        "confidence": 0.988,
+                        "span": {
+                            "offset": 148,
+                            "length": 4
+                        }
+                    },
+                    {
+                        "content": "CILINDRADA",
+                        "polygon": [
+                            368,
+                            509,
+                            482,
+                            511,
+                            482,
+                            533,
+                            368,
+                            532
+                        ],
+                        "confidence": 0.573,
+                        "span": {
+                            "offset": 153,
+                            "length": 10
+                        }
+                    },
+                    {
+                        "content": "CC",
+                        "polygon": [
+                            491,
+                            511,
+                            516,
+                            511,
+                            516,
+                            533,
+                            491,
+                            533
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 164,
+                            "length": 2
+                        }
+                    },
+                    {
+                        "content": "COLOR",
+                        "polygon": [
+                            566,
+                            512,
+                            629,
+                            512,
+                            628,
+                            533,
+                            566,
+                            533
+                        ],
+                        "confidence": 0.994,
+                        "span": {
+                            "offset": 167,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "SERVICIO",
+                        "polygon": [
+                            1130,
+                            519,
+                            1204,
+                            519,
+                            1204,
+                            537,
+                            1130,
+                            536
+                        ],
+                        "confidence": 0.991,
+                        "span": {
+                            "offset": 173,
+                            "length": 8
+                        }
+                    },
+                    {
+                        "content": "1.997",
+                        "polygon": [
+                            371,
+                            538,
+                            449,
+                            538,
+                            449,
+                            567,
+                            371,
+                            567
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 182,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "PLATA",
+                        "polygon": [
+                            566,
+                            539,
+                            664,
+                            540,
+                            664,
+                            568,
+                            566,
+                            569
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 188,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "PARTICULAR",
+                        "polygon": [
+                            1129,
+                            543,
+                            1305,
+                            544,
+                            1305,
+                            571,
+                            1128,
+                            571
+                        ],
+                        "confidence": 0.993,
+                        "span": {
+                            "offset": 194,
+                            "length": 10
+                        }
+                    },
+                    {
+                        "content": "CLASE",
+                        "polygon": [
+                            366,
+                            586,
+                            428,
+                            586,
+                            428,
+                            609,
+                            367,
+                            611
+                        ],
+                        "confidence": 0.989,
+                        "span": {
+                            "offset": 205,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "DE",
+                        "polygon": [
+                            434,
+                            586,
+                            460,
+                            586,
+                            460,
+                            609,
+                            434,
+                            609
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 211,
+                            "length": 2
+                        }
+                    },
+                    {
+                        "content": "VEHÍCULO",
+                        "polygon": [
+                            466,
+                            586,
+                            560,
+                            586,
+                            560,
+                            610,
+                            466,
+                            609
+                        ],
+                        "confidence": 0.915,
+                        "span": {
+                            "offset": 214,
+                            "length": 8
+                        }
+                    },
+                    {
+                        "content": "TIPO",
+                        "polygon": [
+                            670,
+                            587,
+                            706,
+                            588,
+                            706,
+                            607,
+                            670,
+                            608
+                        ],
+                        "confidence": 0.984,
+                        "span": {
+                            "offset": 223,
+                            "length": 4
+                        }
+                    },
+                    {
+                        "content": "CARROCERÍA",
+                        "polygon": [
+                            714,
+                            588,
+                            830,
+                            587,
+                            830,
+                            608,
+                            714,
+                            607
+                        ],
+                        "confidence": 0.961,
+                        "span": {
+                            "offset": 228,
+                            "length": 10
+                        }
+                    },
+                    {
+                        "content": "COMBUSTIBLE",
+                        "polygon": [
+                            937,
+                            590,
+                            1056,
+                            589,
+                            1056,
+                            608,
+                            937,
+                            608
+                        ],
+                        "confidence": 0.99,
+                        "span": {
+                            "offset": 239,
+                            "length": 11
+                        }
+                    },
+                    {
+                        "content": "CAPACIDAD",
+                        "polygon": [
+                            1177,
+                            590,
+                            1270,
+                            590,
+                            1270,
+                            610,
+                            1177,
+                            610
+                        ],
+                        "confidence": 0.965,
+                        "span": {
+                            "offset": 251,
+                            "length": 9
+                        }
+                    },
+                    {
+                        "content": "Kg/PSJ",
+                        "polygon": [
+                            1276,
+                            590,
+                            1331,
+                            590,
+                            1330,
+                            610,
+                            1275,
+                            610
+                        ],
+                        "confidence": 0.985,
+                        "span": {
+                            "offset": 261,
+                            "length": 6
+                        }
+                    },
+                    {
+                        "content": "CAMIONETA",
+                        "polygon": [
+                            366,
+                            615,
+                            531,
+                            615,
+                            531,
+                            642,
+                            366,
+                            643
+                        ],
+                        "confidence": 0.994,
+                        "span": {
+                            "offset": 268,
+                            "length": 9
+                        }
+                    },
+                    {
+                        "content": "WAGON",
+                        "polygon": [
+                            667,
+                            613,
+                            778,
+                            614,
+                            778,
+                            641,
+                            667,
+                            640
+                        ],
+                        "confidence": 0.993,
+                        "span": {
+                            "offset": 278,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "GASOLINA",
+                        "polygon": [
+                            936,
+                            614,
+                            1082,
+                            613,
+                            1082,
+                            640,
+                            936,
+                            639
+                        ],
+                        "confidence": 0.993,
+                        "span": {
+                            "offset": 284,
+                            "length": 8
+                        }
+                    },
+                    {
+                        "content": "5",
+                        "polygon": [
+                            1176,
+                            614,
+                            1190,
+                            614,
+                            1190,
+                            640,
+                            1176,
+                            640
+                        ],
+                        "confidence": 0.996,
+                        "span": {
+                            "offset": 293,
+                            "length": 1
+                        }
+                    },
+                    {
+                        "content": "NÚMERO",
+                        "polygon": [
+                            362,
+                            658,
+                            447,
+                            658,
+                            447,
+                            682,
+                            362,
+                            682
+                        ],
+                        "confidence": 0.945,
+                        "span": {
+                            "offset": 295,
+                            "length": 6
+                        }
+                    },
+                    {
+                        "content": "DE",
+                        "polygon": [
+                            453,
+                            658,
+                            480,
+                            658,
+                            480,
+                            681,
+                            453,
+                            682
+                        ],
+                        "confidence": 0.884,
+                        "span": {
+                            "offset": 302,
+                            "length": 2
+                        }
+                    },
+                    {
+                        "content": "MOTOR",
+                        "polygon": [
+                            484,
+                            658,
+                            552,
+                            657,
+                            552,
+                            681,
+                            484,
+                            681
+                        ],
+                        "confidence": 0.98,
+                        "span": {
+                            "offset": 305,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "REG",
+                        "polygon": [
+                            873,
+                            658,
+                            907,
+                            658,
+                            907,
+                            676,
+                            873,
+                            676
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 311,
+                            "length": 3
+                        }
+                    },
+                    {
+                        "content": "VIN",
+                        "polygon": [
+                            982,
+                            657,
+                            1005,
+                            657,
+                            1006,
+                            674,
+                            982,
+                            674
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 315,
+                            "length": 3
+                        }
+                    },
+                    {
+                        "content": "MR20438178W",
+                        "polygon": [
+                            364,
+                            681,
+                            548,
+                            680,
+                            548,
+                            706,
+                            364,
+                            708
+                        ],
+                        "confidence": 0.978,
+                        "span": {
+                            "offset": 319,
+                            "length": 11
+                        }
+                    },
+                    {
+                        "content": "N",
+                        "polygon": [
+                            873,
+                            683,
+                            887,
+                            683,
+                            887,
+                            709,
+                            873,
+                            709
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 331,
+                            "length": 1
+                        }
+                    },
+                    {
+                        "content": "SJNFBAJ11Z1825686",
+                        "polygon": [
+                            982,
+                            676,
+                            1228,
+                            677,
+                            1228,
+                            700,
+                            982,
+                            701
+                        ],
+                        "confidence": 0.922,
+                        "span": {
+                            "offset": 333,
+                            "length": 17
+                        }
+                    },
+                    {
+                        "content": "NÚMERO",
+                        "polygon": [
+                            361,
+                            736,
+                            443,
+                            735,
+                            444,
+                            758,
+                            362,
+                            759
+                        ],
+                        "confidence": 0.986,
+                        "span": {
+                            "offset": 351,
+                            "length": 6
+                        }
+                    },
+                    {
+                        "content": "DE",
+                        "polygon": [
+                            452,
+                            735,
+                            477,
+                            735,
+                            477,
+                            758,
+                            452,
+                            758
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 358,
+                            "length": 2
+                        }
+                    },
+                    {
+                        "content": "SERIE",
+                        "polygon": [
+                            484,
+                            735,
+                            539,
+                            735,
+                            539,
+                            756,
+                            485,
+                            757
+                        ],
+                        "confidence": 0.962,
+                        "span": {
+                            "offset": 361,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "REG",
+                        "polygon": [
+                            871,
+                            731,
+                            905,
+                            730,
+                            906,
+                            750,
+                            871,
+                            750
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 367,
+                            "length": 3
+                        }
+                    },
+                    {
+                        "content": "NÚMERO",
+                        "polygon": [
+                            924,
+                            730,
+                            998,
+                            729,
+                            998,
+                            749,
+                            925,
+                            750
+                        ],
+                        "confidence": 0.986,
+                        "span": {
+                            "offset": 371,
+                            "length": 6
+                        }
+                    },
+                    {
+                        "content": "DE",
+                        "polygon": [
+                            1005,
+                            729,
+                            1026,
+                            729,
+                            1027,
+                            748,
+                            1005,
+                            749
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 378,
+                            "length": 2
+                        }
+                    },
+                    {
+                        "content": "CHASIS",
+                        "polygon": [
+                            1033,
+                            729,
+                            1095,
+                            729,
+                            1095,
+                            747,
+                            1033,
+                            748
+                        ],
+                        "confidence": 0.989,
+                        "span": {
+                            "offset": 381,
+                            "length": 6
+                        }
+                    },
+                    {
+                        "content": "REG",
+                        "polygon": [
+                            1301,
+                            732,
+                            1331,
+                            732,
+                            1331,
+                            747,
+                            1301,
+                            747
+                        ],
+                        "confidence": 0.995,
+                        "span": {
+                            "offset": 388,
+                            "length": 3
+                        }
+                    },
+                    {
+                        "content": "SJNFBAJ11Z1825686",
+                        "polygon": [
+                            365,
+                            758,
+                            643,
+                            755,
+                            643,
+                            780,
+                            364,
+                            786
+                        ],
+                        "confidence": 0.961,
+                        "span": {
+                            "offset": 392,
+                            "length": 17
+                        }
+                    },
+                    {
+                        "content": "N",
+                        "polygon": [
+                            871,
+                            756,
+                            885,
+                            756,
+                            885,
+                            782,
+                            871,
+                            782
+                        ],
+                        "confidence": 0.977,
+                        "span": {
+                            "offset": 410,
+                            "length": 1
+                        }
+                    },
+                    {
+                        "content": "SJNFBAJ11Z1825686",
+                        "polygon": [
+                            927,
+                            751,
+                            1176,
+                            747,
+                            1176,
+                            772,
+                            927,
+                            776
+                        ],
+                        "confidence": 0.934,
+                        "span": {
+                            "offset": 412,
+                            "length": 17
+                        }
+                    },
+                    {
+                        "content": "N",
+                        "polygon": [
+                            1299,
+                            754,
+                            1312,
+                            754,
+                            1312,
+                            778,
+                            1299,
+                            778
+                        ],
+                        "confidence": 0.991,
+                        "span": {
+                            "offset": 430,
+                            "length": 1
+                        }
+                    },
+                    {
+                        "content": "PROPIETARIO:",
+                        "polygon": [
+                            361,
+                            813,
+                            497,
+                            809,
+                            498,
+                            833,
+                            361,
+                            835
+                        ],
+                        "confidence": 0.929,
+                        "span": {
+                            "offset": 432,
+                            "length": 12
+                        }
+                    },
+                    {
+                        "content": "APELLIDO(S)",
+                        "polygon": [
+                            502,
+                            809,
+                            619,
+                            807,
+                            620,
+                            831,
+                            503,
+                            833
+                        ],
+                        "confidence": 0.921,
+                        "span": {
+                            "offset": 445,
+                            "length": 11
+                        }
+                    },
+                    {
+                        "content": "Y",
+                        "polygon": [
+                            624,
+                            806,
+                            635,
+                            806,
+                            635,
+                            831,
+                            624,
+                            831
+                        ],
+                        "confidence": 0.993,
+                        "span": {
+                            "offset": 457,
+                            "length": 1
+                        }
+                    },
+                    {
+                        "content": "NOMBRE(S)",
+                        "polygon": [
+                            639,
+                            806,
+                            744,
+                            805,
+                            745,
+                            829,
+                            640,
+                            831
+                        ],
+                        "confidence": 0.948,
+                        "span": {
+                            "offset": 459,
+                            "length": 9
+                        }
+                    },
+                    {
+                        "content": "ROJAS",
+                        "polygon": [
+                            361,
+                            841,
+                            456,
+                            838,
+                            456,
+                            867,
+                            361,
+                            869
+                        ],
+                        "confidence": 0.979,
+                        "span": {
+                            "offset": 469,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "ROJAS",
+                        "polygon": [
+                            467,
+                            838,
+                            560,
+                            836,
+                            560,
+                            864,
+                            467,
+                            867
+                        ],
+                        "confidence": 0.972,
+                        "span": {
+                            "offset": 475,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "EDWAR",
+                        "polygon": [
+                            571,
+                            835,
+                            667,
+                            834,
+                            667,
+                            861,
+                            571,
+                            864
+                        ],
+                        "confidence": 0.994,
+                        "span": {
+                            "offset": 481,
+                            "length": 5
+                        }
+                    },
+                    {
+                        "content": "JAVIER",
+                        "polygon": [
+                            680,
+                            834,
+                            771,
+                            833,
+                            771,
+                            858,
+                            680,
+                            861
+                        ],
+                        "confidence": 0.961,
+                        "span": {
+                            "offset": 487,
+                            "length": 6
+                        }
+                    },
+                    {
+                        "content": "IDENTIFICACIÓN",
+                        "polygon": [
+                            1114,
+                            799,
+                            1242,
+                            798,
+                            1242,
+                            816,
+                            1114,
+                            817
+                        ],
+                        "confidence": 0.939,
+                        "span": {
+                            "offset": 494,
+                            "length": 14
+                        }
+                    },
+                    {
+                        "content": "C.C.",
+                        "polygon": [
+                            1053,
+                            826,
+                            1109,
+                            825,
+                            1110,
+                            850,
+                            1054,
+                            852
+                        ],
+                        "confidence": 0.92,
+                        "span": {
+                            "offset": 509,
+                            "length": 4
+                        }
+                    },
+                    {
+                        "content": "80228229",
+                        "polygon": [
+                            1114,
+                            825,
+                            1221,
+                            823,
+                            1221,
+                            847,
+                            1115,
+                            850
+                        ],
+                        "confidence": 0.992,
+                        "span": {
+                            "offset": 514,
+                            "length": 8
+                        }
+                    }
+                ],
+                "lines": [
+                    {
+                        "content": "REPÚBLICA DE COLOMBIA",
+                        "polygon": [
+                            567,
+                            231,
+                            1182,
+                            257,
+                            1181,
+                            303,
+                            565,
+                            282
+                        ],
+                        "spans": [
+                            {
+                                "offset": 0,
+                                "length": 21
+                            }
+                        ]
+                    },
+                    {
+                        "content": "MINISTERIO DE TRANSPORTE",
+                        "polygon": [
+                            671,
+                            301,
+                            1046,
+                            312,
+                            1045,
+                            339,
+                            670,
+                            328
+                        ],
+                        "spans": [
+                            {
+                                "offset": 22,
+                                "length": 24
+                            }
+                        ]
+                    },
+                    {
+                        "content": "Libertad y Orden",
+                        "polygon": [
+                            393,
+                            365,
+                            512,
+                            367,
+                            511,
+                            392,
+                            393,
+                            390
+                        ],
+                        "spans": [
+                            {
+                                "offset": 47,
+                                "length": 16
+                            }
+                        ]
+                    },
+                    {
+                        "content": "LICENCIA DE TRÁNSITO No.",
+                        "polygon": [
+                            528,
+                            350,
+                            995,
+                            356,
+                            994,
+                            394,
+                            527,
+                            384
+                        ],
+                        "spans": [
+                            {
+                                "offset": 64,
+                                "length": 24
+                            }
+                        ]
+                    },
+                    {
+                        "content": "10013078672",
+                        "polygon": [
+                            1088,
+                            375,
+                            1309,
+                            378,
+                            1308,
+                            412,
+                            1087,
+                            409
+                        ],
+                        "spans": [
+                            {
+                                "offset": 89,
+                                "length": 11
+                            }
+                        ]
+                    },
+                    {
+                        "content": "PLACA",
+                        "polygon": [
+                            366,
+                            432,
+                            436,
+                            432,
+                            435,
+                            454,
+                            366,
+                            454
+                        ],
+                        "spans": [
+                            {
+                                "offset": 101,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "content": "MARCA",
+                        "polygon": [
+                            563,
+                            436,
+                            635,
+                            436,
+                            635,
+                            459,
+                            563,
+                            458
+                        ],
+                        "spans": [
+                            {
+                                "offset": 107,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "content": "LÍNEA",
+                        "polygon": [
+                            882,
+                            440,
+                            934,
+                            440,
+                            934,
+                            463,
+                            882,
+                            463
+                        ],
+                        "spans": [
+                            {
+                                "offset": 113,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "content": "MODELO",
+                        "polygon": [
+                            1237,
+                            449,
+                            1309,
+                            450,
+                            1309,
+                            466,
+                            1237,
+                            466
+                        ],
+                        "spans": [
+                            {
+                                "offset": 119,
+                                "length": 6
+                            }
+                        ]
+                    },
+                    {
+                        "content": "JFL262",
+                        "polygon": [
+                            368,
+                            461,
+                            484,
+                            462,
+                            483,
+                            490,
+                            368,
+                            488
+                        ],
+                        "spans": [
+                            {
+                                "offset": 126,
+                                "length": 6
+                            }
+                        ]
+                    },
+                    {
+                        "content": "NISSAN",
+                        "polygon": [
+                            565,
+                            463,
+                            685,
+                            463,
+                            685,
+                            493,
+                            565,
+                            492
+                        ],
+                        "spans": [
+                            {
+                                "offset": 133,
+                                "length": 6
+                            }
+                        ]
+                    },
+                    {
+                        "content": "QASHQAI",
+                        "polygon": [
+                            884,
+                            468,
+                            1021,
+                            469,
+                            1021,
+                            496,
+                            884,
+                            495
+                        ],
+                        "spans": [
+                            {
+                                "offset": 140,
+                                "length": 7
+                            }
+                        ]
+                    },
+                    {
+                        "content": "2017",
+                        "polygon": [
+                            1237,
+                            475,
+                            1300,
+                            475,
+                            1299,
+                            499,
+                            1236,
+                            499
+                        ],
+                        "spans": [
+                            {
+                                "offset": 148,
+                                "length": 4
+                            }
+                        ]
+                    },
+                    {
+                        "content": "CILINDRADA CC",
+                        "polygon": [
+                            366,
+                            509,
+                            518,
+                            510,
+                            518,
+                            533,
+                            366,
+                            531
+                        ],
+                        "spans": [
+                            {
+                                "offset": 153,
+                                "length": 13
+                            }
+                        ]
+                    },
+                    {
+                        "content": "COLOR",
+                        "polygon": [
+                            566,
+                            511,
+                            634,
+                            511,
+                            633,
+                            533,
+                            566,
+                            533
+                        ],
+                        "spans": [
+                            {
+                                "offset": 167,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "content": "SERVICIO",
+                        "polygon": [
+                            1128,
+                            518,
+                            1208,
+                            519,
+                            1208,
+                            536,
+                            1128,
+                            536
+                        ],
+                        "spans": [
+                            {
+                                "offset": 173,
+                                "length": 8
+                            }
+                        ]
+                    },
+                    {
+                        "content": "1.997",
+                        "polygon": [
+                            366,
+                            538,
+                            451,
+                            538,
+                            451,
+                            567,
+                            366,
+                            567
+                        ],
+                        "spans": [
+                            {
+                                "offset": 182,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "content": "PLATA",
+                        "polygon": [
+                            564,
+                            538,
+                            671,
+                            539,
+                            671,
+                            568,
+                            564,
+                            568
+                        ],
+                        "spans": [
+                            {
+                                "offset": 188,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "content": "PARTICULAR",
+                        "polygon": [
+                            1128,
+                            542,
+                            1310,
+                            542,
+                            1310,
+                            571,
+                            1128,
+                            570
+                        ],
+                        "spans": [
+                            {
+                                "offset": 194,
+                                "length": 10
+                            }
+                        ]
+                    },
+                    {
+                        "content": "CLASE DE VEHÍCULO",
+                        "polygon": [
+                            364,
+                            586,
+                            562,
+                            585,
+                            562,
+                            609,
+                            365,
+                            610
+                        ],
+                        "spans": [
+                            {
+                                "offset": 205,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    {
+                        "content": "TIPO CARROCERÍA",
+                        "polygon": [
+                            665,
+                            587,
+                            831,
+                            587,
+                            831,
+                            607,
+                            665,
+                            607
+                        ],
+                        "spans": [
+                            {
+                                "offset": 223,
+                                "length": 15
+                            }
+                        ]
+                    },
+                    {
+                        "content": "COMBUSTIBLE",
+                        "polygon": [
+                            935,
+                            589,
+                            1059,
+                            589,
+                            1059,
+                            607,
+                            935,
+                            607
+                        ],
+                        "spans": [
+                            {
+                                "offset": 239,
+                                "length": 11
+                            }
+                        ]
+                    },
+                    {
+                        "content": "CAPACIDAD Kg/PSJ",
+                        "polygon": [
+                            1175,
+                            589,
+                            1331,
+                            589,
+                            1331,
+                            609,
+                            1175,
+                            609
+                        ],
+                        "spans": [
+                            {
+                                "offset": 251,
+                                "length": 16
+                            }
+                        ]
+                    },
+                    {
+                        "content": "CAMIONETA",
+                        "polygon": [
+                            362,
+                            614,
+                            537,
+                            614,
+                            537,
+                            641,
+                            362,
+                            642
+                        ],
+                        "spans": [
+                            {
+                                "offset": 268,
+                                "length": 9
+                            }
+                        ]
+                    },
+                    {
+                        "content": "WAGON",
+                        "polygon": [
+                            666,
+                            613,
+                            789,
+                            613,
+                            788,
+                            640,
+                            666,
+                            639
+                        ],
+                        "spans": [
+                            {
+                                "offset": 278,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "content": "GASOLINA",
+                        "polygon": [
+                            935,
+                            613,
+                            1088,
+                            613,
+                            1088,
+                            639,
+                            935,
+                            639
+                        ],
+                        "spans": [
+                            {
+                                "offset": 284,
+                                "length": 8
+                            }
+                        ]
+                    },
+                    {
+                        "content": "5",
+                        "polygon": [
+                            1176,
+                            614,
+                            1194,
+                            614,
+                            1194,
+                            640,
+                            1175,
+                            640
+                        ],
+                        "spans": [
+                            {
+                                "offset": 293,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    {
+                        "content": "NÚMERO DE MOTOR",
+                        "polygon": [
+                            359,
+                            658,
+                            555,
+                            656,
+                            555,
+                            680,
+                            359,
+                            681
+                        ],
+                        "spans": [
+                            {
+                                "offset": 295,
+                                "length": 15
+                            }
+                        ]
+                    },
+                    {
+                        "content": "REG",
+                        "polygon": [
+                            871,
+                            658,
+                            911,
+                            658,
+                            911,
+                            676,
+                            872,
+                            676
+                        ],
+                        "spans": [
+                            {
+                                "offset": 311,
+                                "length": 3
+                            }
+                        ]
+                    },
+                    {
+                        "content": "VIN",
+                        "polygon": [
+                            980,
+                            658,
+                            1011,
+                            657,
+                            1011,
+                            674,
+                            980,
+                            674
+                        ],
+                        "spans": [
+                            {
+                                "offset": 315,
+                                "length": 3
+                            }
+                        ]
+                    },
+                    {
+                        "content": "MR20438178W",
+                        "polygon": [
+                            360,
+                            680,
+                            560,
+                            679,
+                            561,
+                            705,
+                            360,
+                            708
+                        ],
+                        "spans": [
+                            {
+                                "offset": 319,
+                                "length": 11
+                            }
+                        ]
+                    },
+                    {
+                        "content": "N",
+                        "polygon": [
+                            871,
+                            683,
+                            896,
+                            683,
+                            896,
+                            709,
+                            870,
+                            709
+                        ],
+                        "spans": [
+                            {
+                                "offset": 331,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    {
+                        "content": "SJNFBAJ11Z1825686",
+                        "polygon": [
+                            980,
+                            675,
+                            1230,
+                            675,
+                            1230,
+                            700,
+                            980,
+                            700
+                        ],
+                        "spans": [
+                            {
+                                "offset": 333,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    {
+                        "content": "NÚMERO DE SERIE",
+                        "polygon": [
+                            360,
+                            736,
+                            540,
+                            735,
+                            540,
+                            756,
+                            360,
+                            758
+                        ],
+                        "spans": [
+                            {
+                                "offset": 351,
+                                "length": 15
+                            }
+                        ]
+                    },
+                    {
+                        "content": "REG NÚMERO DE CHASIS",
+                        "polygon": [
+                            870,
+                            730,
+                            1095,
+                            728,
+                            1095,
+                            747,
+                            870,
+                            750
+                        ],
+                        "spans": [
+                            {
+                                "offset": 367,
+                                "length": 20
+                            }
+                        ]
+                    },
+                    {
+                        "content": "REG",
+                        "polygon": [
+                            1299,
+                            732,
+                            1334,
+                            732,
+                            1334,
+                            747,
+                            1300,
+                            747
+                        ],
+                        "spans": [
+                            {
+                                "offset": 388,
+                                "length": 3
+                            }
+                        ]
+                    },
+                    {
+                        "content": "SJNFBAJ11Z1825686",
+                        "polygon": [
+                            361,
+                            757,
+                            645,
+                            754,
+                            646,
+                            780,
+                            361,
+                            786
+                        ],
+                        "spans": [
+                            {
+                                "offset": 392,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    {
+                        "content": "N",
+                        "polygon": [
+                            870,
+                            756,
+                            895,
+                            756,
+                            895,
+                            782,
+                            868,
+                            782
+                        ],
+                        "spans": [
+                            {
+                                "offset": 410,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    {
+                        "content": "SJNFBAJ11Z1825686",
+                        "polygon": [
+                            922,
+                            749,
+                            1177,
+                            747,
+                            1177,
+                            771,
+                            922,
+                            775
+                        ],
+                        "spans": [
+                            {
+                                "offset": 412,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    {
+                        "content": "N",
+                        "polygon": [
+                            1300,
+                            754,
+                            1321,
+                            754,
+                            1321,
+                            778,
+                            1298,
+                            778
+                        ],
+                        "spans": [
+                            {
+                                "offset": 430,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    {
+                        "content": "PROPIETARIO: APELLIDO(S) Y NOMBRE(S)",
+                        "polygon": [
+                            360,
+                            810,
+                            744,
+                            805,
+                            745,
+                            828,
+                            360,
+                            835
+                        ],
+                        "spans": [
+                            {
+                                "offset": 432,
+                                "length": 36
+                            }
+                        ]
+                    },
+                    {
+                        "content": "ROJAS ROJAS EDWAR JAVIER",
+                        "polygon": [
+                            356,
+                            840,
+                            777,
+                            832,
+                            777,
+                            858,
+                            356,
+                            868
+                        ],
+                        "spans": [
+                            {
+                                "offset": 469,
+                                "length": 24
+                            }
+                        ]
+                    },
+                    {
+                        "content": "IDENTIFICACIÓN",
+                        "polygon": [
+                            1113,
+                            798,
+                            1246,
+                            797,
+                            1246,
+                            815,
+                            1113,
+                            817
+                        ],
+                        "spans": [
+                            {
+                                "offset": 494,
+                                "length": 14
+                            }
+                        ]
+                    },
+                    {
+                        "content": "C.C. 80228229",
+                        "polygon": [
+                            1053,
+                            826,
+                            1223,
+                            822,
+                            1224,
+                            847,
+                            1053,
+                            851
+                        ],
+                        "spans": [
+                            {
+                                "offset": 509,
+                                "length": 13
+                            }
+                        ]
+                    }
+                ],
+                "spans": [
+                    {
+                        "offset": 0,
+                        "length": 522
+                    }
+                ]
+            }
+        ],
+        "tables": [
+            {
+                "rowCount": 10,
+                "columnCount": 8,
+                "cells": [
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 0,
+                        "columnIndex": 0,
+                        "content": "PLACA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    351,
+                                    421,
+                                    564,
+                                    423,
+                                    564,
+                                    459,
+                                    350,
+                                    457
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 101,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 0,
+                        "columnIndex": 1,
+                        "columnSpan": 2,
+                        "content": "MARCA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    564,
+                                    423,
+                                    853,
+                                    427,
+                                    853,
+                                    462,
+                                    564,
+                                    459
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 107,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 0,
+                        "columnIndex": 3,
+                        "columnSpan": 2,
+                        "content": "LÍNEA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    853,
+                                    427,
+                                    1108,
+                                    429,
+                                    1108,
+                                    464,
+                                    853,
+                                    462
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 113,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 0,
+                        "columnIndex": 5,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1108,
+                                    429,
+                                    1211,
+                                    430,
+                                    1211,
+                                    464,
+                                    1108,
+                                    464
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 0,
+                        "columnIndex": 6,
+                        "columnSpan": 2,
+                        "content": "MODELO",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1211,
+                                    430,
+                                    1344,
+                                    431,
+                                    1344,
+                                    465,
+                                    1211,
+                                    464
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 119,
+                                "length": 6
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 1,
+                        "columnIndex": 0,
+                        "content": "JFL262",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    350,
+                                    457,
+                                    564,
+                                    459,
+                                    563,
+                                    504,
+                                    350,
+                                    502
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 126,
+                                "length": 6
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 1,
+                        "columnIndex": 1,
+                        "columnSpan": 2,
+                        "content": "NISSAN",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    564,
+                                    459,
+                                    853,
+                                    462,
+                                    852,
+                                    506,
+                                    563,
+                                    504
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 133,
+                                "length": 6
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 1,
+                        "columnIndex": 3,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    853,
+                                    462,
+                                    919,
+                                    462,
+                                    919,
+                                    506,
+                                    852,
+                                    506
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 1,
+                        "columnIndex": 4,
+                        "content": "QASHQAI",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    919,
+                                    462,
+                                    1108,
+                                    464,
+                                    1108,
+                                    508,
+                                    919,
+                                    506
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 140,
+                                "length": 7
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 1,
+                        "columnIndex": 5,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1108,
+                                    464,
+                                    1211,
+                                    464,
+                                    1211,
+                                    508,
+                                    1108,
+                                    508
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 1,
+                        "columnIndex": 6,
+                        "columnSpan": 2,
+                        "content": "2017",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1211,
+                                    464,
+                                    1344,
+                                    465,
+                                    1344,
+                                    509,
+                                    1211,
+                                    508
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 148,
+                                "length": 4
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 2,
+                        "columnIndex": 0,
+                        "content": "CILINDRADA CC",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    350,
+                                    502,
+                                    563,
+                                    504,
+                                    563,
+                                    534,
+                                    349,
+                                    534
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 153,
+                                "length": 13
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 2,
+                        "columnIndex": 1,
+                        "columnSpan": 2,
+                        "content": "COLOR",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    563,
+                                    504,
+                                    852,
+                                    506,
+                                    852,
+                                    535,
+                                    563,
+                                    534
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 167,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 2,
+                        "columnIndex": 3,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    852,
+                                    506,
+                                    919,
+                                    506,
+                                    919,
+                                    535,
+                                    852,
+                                    535
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 2,
+                        "columnIndex": 4,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    919,
+                                    506,
+                                    1108,
+                                    508,
+                                    1108,
+                                    536,
+                                    919,
+                                    535
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 2,
+                        "columnIndex": 5,
+                        "content": "SERVICIO",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1108,
+                                    508,
+                                    1211,
+                                    508,
+                                    1212,
+                                    536,
+                                    1108,
+                                    536
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 173,
+                                "length": 8
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 2,
+                        "columnIndex": 6,
+                        "columnSpan": 2,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1211,
+                                    508,
+                                    1344,
+                                    509,
+                                    1345,
+                                    537,
+                                    1212,
+                                    536
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 3,
+                        "columnIndex": 0,
+                        "content": "1.997",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    349,
+                                    534,
+                                    563,
+                                    534,
+                                    563,
+                                    578,
+                                    348,
+                                    578
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 182,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 3,
+                        "columnIndex": 1,
+                        "columnSpan": 2,
+                        "content": "PLATA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    563,
+                                    534,
+                                    852,
+                                    535,
+                                    852,
+                                    578,
+                                    563,
+                                    578
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 188,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 3,
+                        "columnIndex": 3,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    852,
+                                    535,
+                                    919,
+                                    535,
+                                    918,
+                                    578,
+                                    852,
+                                    578
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 3,
+                        "columnIndex": 4,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    919,
+                                    535,
+                                    1108,
+                                    536,
+                                    1109,
+                                    579,
+                                    918,
+                                    578
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 3,
+                        "columnIndex": 5,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1108,
+                                    536,
+                                    1212,
+                                    536,
+                                    1212,
+                                    579,
+                                    1109,
+                                    579
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 3,
+                        "columnIndex": 6,
+                        "columnSpan": 2,
+                        "content": "PARTICULAR",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1212,
+                                    536,
+                                    1345,
+                                    537,
+                                    1345,
+                                    579,
+                                    1212,
+                                    579
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 194,
+                                "length": 10
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 4,
+                        "columnIndex": 0,
+                        "content": "CLASE DE VEHÍCULO",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    348,
+                                    578,
+                                    563,
+                                    578,
+                                    561,
+                                    610,
+                                    347,
+                                    610
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 205,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 4,
+                        "columnIndex": 1,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    563,
+                                    578,
+                                    649,
+                                    578,
+                                    649,
+                                    610,
+                                    561,
+                                    610
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 4,
+                        "columnIndex": 2,
+                        "content": "TIPO CARROCERÍA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    649,
+                                    578,
+                                    852,
+                                    578,
+                                    852,
+                                    610,
+                                    649,
+                                    610
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 223,
+                                "length": 15
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 4,
+                        "columnIndex": 3,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    852,
+                                    578,
+                                    918,
+                                    578,
+                                    918,
+                                    610,
+                                    852,
+                                    610
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 4,
+                        "columnIndex": 4,
+                        "content": "COMBUSTIBLE",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    918,
+                                    578,
+                                    1109,
+                                    579,
+                                    1109,
+                                    610,
+                                    918,
+                                    610
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 239,
+                                "length": 11
+                            }
+                        ]
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 4,
+                        "columnIndex": 5,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1109,
+                                    579,
+                                    1212,
+                                    579,
+                                    1212,
+                                    610,
+                                    1109,
+                                    610
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "kind": "columnHeader",
+                        "rowIndex": 4,
+                        "columnIndex": 6,
+                        "columnSpan": 2,
+                        "content": "CAPACIDAD Kg/PSJ",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1212,
+                                    579,
+                                    1345,
+                                    579,
+                                    1345,
+                                    610,
+                                    1212,
+                                    610
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 251,
+                                "length": 16
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 5,
+                        "columnIndex": 0,
+                        "content": "CAMIONETA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    347,
+                                    610,
+                                    561,
+                                    610,
+                                    561,
+                                    651,
+                                    347,
+                                    652
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 268,
+                                "length": 9
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 5,
+                        "columnIndex": 1,
+                        "columnSpan": 2,
+                        "content": "WAGON",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    561,
+                                    610,
+                                    852,
+                                    610,
+                                    851,
+                                    650,
+                                    561,
+                                    651
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 278,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 5,
+                        "columnIndex": 3,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    852,
+                                    610,
+                                    918,
+                                    610,
+                                    918,
+                                    650,
+                                    851,
+                                    650
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 5,
+                        "columnIndex": 4,
+                        "content": "GASOLINA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    918,
+                                    610,
+                                    1109,
+                                    610,
+                                    1109,
+                                    650,
+                                    918,
+                                    650
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 284,
+                                "length": 8
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 5,
+                        "columnIndex": 5,
+                        "content": "5",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1109,
+                                    610,
+                                    1212,
+                                    610,
+                                    1213,
+                                    649,
+                                    1109,
+                                    650
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 293,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 5,
+                        "columnIndex": 6,
+                        "columnSpan": 2,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1212,
+                                    610,
+                                    1345,
+                                    610,
+                                    1346,
+                                    648,
+                                    1213,
+                                    649
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 6,
+                        "columnIndex": 0,
+                        "content": "NÚMERO DE MOTOR",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    347,
+                                    652,
+                                    561,
+                                    651,
+                                    561,
+                                    679,
+                                    346,
+                                    680
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 295,
+                                "length": 15
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 6,
+                        "columnIndex": 1,
+                        "columnSpan": 2,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    561,
+                                    651,
+                                    851,
+                                    650,
+                                    851,
+                                    677,
+                                    561,
+                                    679
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 6,
+                        "columnIndex": 3,
+                        "content": "REG",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    851,
+                                    650,
+                                    918,
+                                    650,
+                                    918,
+                                    677,
+                                    851,
+                                    677
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 311,
+                                "length": 3
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 6,
+                        "columnIndex": 4,
+                        "content": "VIN",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    918,
+                                    650,
+                                    1109,
+                                    650,
+                                    1110,
+                                    676,
+                                    918,
+                                    677
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 315,
+                                "length": 3
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 6,
+                        "columnIndex": 5,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1109,
+                                    650,
+                                    1213,
+                                    649,
+                                    1213,
+                                    676,
+                                    1110,
+                                    676
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 6,
+                        "columnIndex": 6,
+                        "columnSpan": 2,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1213,
+                                    649,
+                                    1346,
+                                    648,
+                                    1346,
+                                    676,
+                                    1213,
+                                    676
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 7,
+                        "columnIndex": 0,
+                        "content": "MR20438178W",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    346,
+                                    680,
+                                    561,
+                                    679,
+                                    560,
+                                    722,
+                                    345,
+                                    723
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 319,
+                                "length": 11
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 7,
+                        "columnIndex": 1,
+                        "columnSpan": 2,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    561,
+                                    679,
+                                    851,
+                                    677,
+                                    851,
+                                    719,
+                                    560,
+                                    722
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 7,
+                        "columnIndex": 3,
+                        "content": "N",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    851,
+                                    677,
+                                    918,
+                                    677,
+                                    918,
+                                    719,
+                                    851,
+                                    719
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 331,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 7,
+                        "columnIndex": 4,
+                        "columnSpan": 2,
+                        "content": "SJNFBAJ11Z1825686",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    918,
+                                    677,
+                                    1213,
+                                    676,
+                                    1214,
+                                    718,
+                                    918,
+                                    719
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 333,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 7,
+                        "columnIndex": 6,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1213,
+                                    676,
+                                    1275,
+                                    676,
+                                    1275,
+                                    718,
+                                    1214,
+                                    718
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 7,
+                        "columnIndex": 7,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1275,
+                                    676,
+                                    1346,
+                                    676,
+                                    1346,
+                                    718,
+                                    1275,
+                                    718
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 8,
+                        "columnIndex": 0,
+                        "content": "NÚMERO DE SERIE",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    345,
+                                    723,
+                                    560,
+                                    722,
+                                    560,
+                                    753,
+                                    345,
+                                    756
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 351,
+                                "length": 15
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 8,
+                        "columnIndex": 1,
+                        "columnSpan": 2,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    560,
+                                    722,
+                                    851,
+                                    719,
+                                    851,
+                                    750,
+                                    560,
+                                    753
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 8,
+                        "columnIndex": 3,
+                        "content": "REG",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    851,
+                                    719,
+                                    918,
+                                    719,
+                                    918,
+                                    750,
+                                    851,
+                                    750
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 367,
+                                "length": 3
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 8,
+                        "columnIndex": 4,
+                        "content": "NÚMERO DE CHASIS",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    918,
+                                    719,
+                                    1110,
+                                    718,
+                                    1110,
+                                    748,
+                                    918,
+                                    750
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 371,
+                                "length": 16
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 8,
+                        "columnIndex": 5,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1110,
+                                    718,
+                                    1214,
+                                    718,
+                                    1214,
+                                    747,
+                                    1110,
+                                    748
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 8,
+                        "columnIndex": 6,
+                        "columnSpan": 2,
+                        "content": "REG",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1214,
+                                    718,
+                                    1346,
+                                    718,
+                                    1347,
+                                    746,
+                                    1214,
+                                    747
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 388,
+                                "length": 3
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 9,
+                        "columnIndex": 0,
+                        "content": "SJNFBAJ11Z1825686",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    345,
+                                    756,
+                                    560,
+                                    753,
+                                    559,
+                                    798,
+                                    344,
+                                    801
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 392,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 9,
+                        "columnIndex": 1,
+                        "columnSpan": 2,
+                        "content": "",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    560,
+                                    753,
+                                    851,
+                                    750,
+                                    851,
+                                    795,
+                                    559,
+                                    798
+                                ]
+                            }
+                        ],
+                        "spans": []
+                    },
+                    {
+                        "rowIndex": 9,
+                        "columnIndex": 3,
+                        "content": "N",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    851,
+                                    750,
+                                    918,
+                                    750,
+                                    917,
+                                    795,
+                                    851,
+                                    795
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 410,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 9,
+                        "columnIndex": 4,
+                        "columnSpan": 2,
+                        "content": "SJNFBAJ11Z1825686",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    918,
+                                    750,
+                                    1214,
+                                    747,
+                                    1214,
+                                    792,
+                                    917,
+                                    795
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 412,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    {
+                        "rowIndex": 9,
+                        "columnIndex": 6,
+                        "columnSpan": 2,
+                        "content": "N",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1214,
+                                    747,
+                                    1347,
+                                    746,
+                                    1347,
+                                    791,
+                                    1214,
+                                    792
+                                ]
+                            }
+                        ],
+                        "spans": [
+                            {
+                                "offset": 430,
+                                "length": 1
+                            }
+                        ]
+                    }
+                ],
+                "boundingRegions": [
+                    {
+                        "pageNumber": 1,
+                        "polygon": [
+                            360,
+                            429,
+                            1334,
+                            427,
+                            1335,
+                            800,
+                            361,
+                            802
+                        ]
+                    }
+                ],
+                "spans": [
+                    {
+                        "offset": 101,
+                        "length": 330
+                    }
+                ]
+            }
+        ],
+        "styles": [],
+        "documents": [
+            {
+                "docType": "version2",
+                "boundingRegions": [
+                    {
+                        "pageNumber": 1,
+                        "polygon": [
+                            0,
+                            0,
+                            1599,
+                            0,
+                            1599,
+                            899,
+                            0,
+                            899
+                        ]
+                    }
+                ],
+                "fields": {
+                    "placa": {
+                        "type": "string",
+                        "valueString": "JFL262",
+                        "content": "JFL262",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    372,
+                                    461,
+                                    482,
+                                    463,
+                                    482,
+                                    490,
+                                    372,
+                                    489
+                                ]
+                            }
+                        ],
+                        "confidence": 0.92,
+                        "spans": [
+                            {
+                                "offset": 126,
+                                "length": 6
+                            }
+                        ]
+                    },
+                    "marca": {
+                        "type": "string",
+                        "valueString": "NISSAN",
+                        "content": "NISSAN",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    567,
+                                    463,
+                                    677,
+                                    464,
+                                    677,
+                                    494,
+                                    567,
+                                    493
+                                ]
+                            }
+                        ],
+                        "confidence": 0.92,
+                        "spans": [
+                            {
+                                "offset": 133,
+                                "length": 6
+                            }
+                        ]
+                    },
+                    "linea": {
+                        "type": "string",
+                        "valueString": "QASHQAI",
+                        "content": "QASHQAI",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    884,
+                                    468,
+                                    1021,
+                                    469,
+                                    1021,
+                                    497,
+                                    884,
+                                    496
+                                ]
+                            }
+                        ],
+                        "confidence": 0.92,
+                        "spans": [
+                            {
+                                "offset": 140,
+                                "length": 7
+                            }
+                        ]
+                    },
+                    "modelo": {
+                        "type": "string",
+                        "valueString": "2017",
+                        "content": "2017",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1240,
+                                    475,
+                                    1300,
+                                    475,
+                                    1300,
+                                    499,
+                                    1240,
+                                    499
+                                ]
+                            }
+                        ],
+                        "confidence": 0.92,
+                        "spans": [
+                            {
+                                "offset": 148,
+                                "length": 4
+                            }
+                        ]
+                    },
+                    "cilindrada_cc": {
+                        "type": "string",
+                        "valueString": "1.997",
+                        "content": "1.997",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    371,
+                                    538,
+                                    449,
+                                    538,
+                                    449,
+                                    567,
+                                    371,
+                                    567
+                                ]
+                            }
+                        ],
+                        "confidence": 0.92,
+                        "spans": [
+                            {
+                                "offset": 182,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    "color": {
+                        "type": "string",
+                        "valueString": "PLATA",
+                        "content": "PLATA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    566,
+                                    539,
+                                    664,
+                                    539,
+                                    664,
+                                    569,
+                                    566,
+                                    569
+                                ]
+                            }
+                        ],
+                        "confidence": 0.935,
+                        "spans": [
+                            {
+                                "offset": 188,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    "servicio": {
+                        "type": "string",
+                        "valueString": "PARTICULAR",
+                        "content": "PARTICULAR",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1128,
+                                    543,
+                                    1305,
+                                    543,
+                                    1305,
+                                    572,
+                                    1128,
+                                    571
+                                ]
+                            }
+                        ],
+                        "confidence": 0.919,
+                        "spans": [
+                            {
+                                "offset": 194,
+                                "length": 10
+                            }
+                        ]
+                    },
+                    "clase_vehiculo": {
+                        "type": "string",
+                        "valueString": "CAMIONETA",
+                        "content": "CAMIONETA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    366,
+                                    615,
+                                    531,
+                                    614,
+                                    531,
+                                    642,
+                                    366,
+                                    643
+                                ]
+                            }
+                        ],
+                        "confidence": 0.92,
+                        "spans": [
+                            {
+                                "offset": 268,
+                                "length": 9
+                            }
+                        ]
+                    },
+                    "tipo_carroceria": {
+                        "type": "string",
+                        "valueString": "WAGON",
+                        "content": "WAGON",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    667,
+                                    613,
+                                    778,
+                                    614,
+                                    778,
+                                    641,
+                                    667,
+                                    640
+                                ]
+                            }
+                        ],
+                        "confidence": 0.938,
+                        "spans": [
+                            {
+                                "offset": 278,
+                                "length": 5
+                            }
+                        ]
+                    },
+                    "combustible": {
+                        "type": "string",
+                        "valueString": "GASOLINA",
+                        "content": "GASOLINA",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    936,
+                                    613,
+                                    1082,
+                                    613,
+                                    1082,
+                                    640,
+                                    936,
+                                    640
+                                ]
+                            }
+                        ],
+                        "confidence": 0.927,
+                        "spans": [
+                            {
+                                "offset": 284,
+                                "length": 8
+                            }
+                        ]
+                    },
+                    "capacidad_kg_psj": {
+                        "type": "string",
+                        "valueString": "5",
+                        "content": "5",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1176,
+                                    614,
+                                    1190,
+                                    614,
+                                    1190,
+                                    640,
+                                    1176,
+                                    640
+                                ]
+                            }
+                        ],
+                        "confidence": 0.064,
+                        "spans": [
+                            {
+                                "offset": 293,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    "numero_motor": {
+                        "type": "string",
+                        "valueString": "MR20438178W",
+                        "content": "MR20438178W",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    364,
+                                    681,
+                                    548,
+                                    680,
+                                    548,
+                                    706,
+                                    364,
+                                    708
+                                ]
+                            }
+                        ],
+                        "confidence": 0.92,
+                        "spans": [
+                            {
+                                "offset": 319,
+                                "length": 11
+                            }
+                        ]
+                    },
+                    "reg_motor": {
+                        "type": "string",
+                        "valueString": "N",
+                        "content": "N",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    873,
+                                    683,
+                                    887,
+                                    683,
+                                    887,
+                                    709,
+                                    873,
+                                    709
+                                ]
+                            }
+                        ],
+                        "confidence": 0.069,
+                        "spans": [
+                            {
+                                "offset": 331,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    "vin": {
+                        "type": "string",
+                        "valueString": "SJNFBAJ11Z1825686",
+                        "content": "SJNFBAJ11Z1825686",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    982,
+                                    676,
+                                    1228,
+                                    676,
+                                    1228,
+                                    701,
+                                    982,
+                                    701
+                                ]
+                            }
+                        ],
+                        "confidence": 0.915,
+                        "spans": [
+                            {
+                                "offset": 333,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    "numero_serie": {
+                        "type": "string",
+                        "valueString": "SJNFBAJ11Z1825686",
+                        "content": "SJNFBAJ11Z1825686",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    364,
+                                    758,
+                                    643,
+                                    754,
+                                    643,
+                                    781,
+                                    364,
+                                    786
+                                ]
+                            }
+                        ],
+                        "confidence": 0.903,
+                        "spans": [
+                            {
+                                "offset": 392,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    "reg_serie": {
+                        "type": "string",
+                        "valueString": "N",
+                        "content": "N",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    871,
+                                    756,
+                                    885,
+                                    756,
+                                    885,
+                                    782,
+                                    871,
+                                    782
+                                ]
+                            }
+                        ],
+                        "confidence": 0.062,
+                        "spans": [
+                            {
+                                "offset": 410,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    "numero_chasis": {
+                        "type": "string",
+                        "valueString": "SJNFBAJ11Z1825686",
+                        "content": "SJNFBAJ11Z1825686",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    927,
+                                    751,
+                                    1176,
+                                    747,
+                                    1176,
+                                    772,
+                                    927,
+                                    776
+                                ]
+                            }
+                        ],
+                        "confidence": 0.913,
+                        "spans": [
+                            {
+                                "offset": 412,
+                                "length": 17
+                            }
+                        ]
+                    },
+                    "reg_chasis": {
+                        "type": "string",
+                        "valueString": "N",
+                        "content": "N",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1299,
+                                    754,
+                                    1312,
+                                    754,
+                                    1312,
+                                    778,
+                                    1299,
+                                    778
+                                ]
+                            }
+                        ],
+                        "confidence": 0.096,
+                        "spans": [
+                            {
+                                "offset": 430,
+                                "length": 1
+                            }
+                        ]
+                    },
+                    "nombre_propietario": {
+                        "type": "string",
+                        "valueString": "ROJAS ROJAS EDWAR JAVIER",
+                        "content": "ROJAS ROJAS EDWAR JAVIER",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    360,
+                                    840,
+                                    771,
+                                    831,
+                                    772,
+                                    860,
+                                    361,
+                                    869
+                                ]
+                            }
+                        ],
+                        "confidence": 0.866,
+                        "spans": [
+                            {
+                                "offset": 469,
+                                "length": 24
+                            }
+                        ]
+                    },
+                    "id_propietario": {
+                        "type": "string",
+                        "valueString": "C.C. 80228229",
+                        "content": "C.C. 80228229",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1053,
+                                    826,
+                                    1221,
+                                    822,
+                                    1222,
+                                    848,
+                                    1054,
+                                    852
+                                ]
+                            }
+                        ],
+                        "confidence": 0.911,
+                        "spans": [
+                            {
+                                "offset": 509,
+                                "length": 13
+                            }
+                        ]
+                    },
+                    "numero_licencia": {
+                        "type": "string",
+                        "valueString": "10013078672",
+                        "content": "10013078672",
+                        "boundingRegions": [
+                            {
+                                "pageNumber": 1,
+                                "polygon": [
+                                    1092,
+                                    376,
+                                    1308,
+                                    379,
+                                    1308,
+                                    412,
+                                    1092,
+                                    410
+                                ]
+                            }
+                        ],
+                        "confidence": 0.912,
+                        "spans": [
+                            {
+                                "offset": 89,
+                                "length": 11
+                            }
+                        ]
+                    }
+                },
+                "confidence": 0.987,
+                "spans": [
+                    {
+                        "offset": 0,
+                        "length": 522
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -4,12 +4,12 @@ from core.models import PropertyCard
 
 
 class Vehicle(Auditor):
-  GAS='GAS'
+  GASOLINA='GASOLINA'
   DIESEL='DIESEL'
   EXTRA='EXTRA'
   
   FUEL_CHOICES = [
-    ('GAS', 'GAS'),
+    ('GASOLINA', 'GASOLINA'),
     ('DIESEL', 'DIESEL'),
     ('EXTRA', 'EXTRA'),
   ]
@@ -19,8 +19,8 @@ class Vehicle(Auditor):
   brand = models.CharField(max_length=50)
   color = models.CharField(max_length=30)
   type_vehicle = models.CharField(max_length=30)
-  doors_number = models.PositiveIntegerField()
+  doors_number = models.PositiveIntegerField(null=True)
   fuel_type = models.CharField(max_length=20, choices=FUEL_CHOICES)
-  kilometric = models.PositiveIntegerField()
+  kilometric = models.PositiveIntegerField(null=True)
   property_card = models.OneToOneField(PropertyCard, on_delete=models.CASCADE, related_name='property_cards_vehicle')
 

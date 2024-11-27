@@ -11,10 +11,7 @@ class Person(Auditor):
   ]
   
   uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
-  first_name = models.CharField(max_length=50)
-  middle_name = models.CharField(max_length=50, blank=True, null=True)
-  last_name = models.CharField(max_length=50)
-  second_last_name = models.CharField(max_length=50, blank=True, null=True)
+  name = models.CharField(max_length=350)
   gender = models.CharField(max_length=50, choices=GENDER_CHOICES)
   birth_date = models.DateField(null=True)
   document_number = models.CharField(max_length=50, blank=True, null=True)

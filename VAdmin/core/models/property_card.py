@@ -5,8 +5,8 @@ import uuid
 
 class PropertyCard(Auditor):
   property_card_number = models.CharField(max_length=100, unique=True)
-  issue_date = models.DateField()
-  enrollment_date = models.DateField()
-  transit_authority = models.CharField(max_length=200)
+  issue_date = models.DateField(null=True)
+  enrollment_date = models.DateField(null=True)
+  transit_authority = models.CharField(null=True, max_length=200)
   person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name='person_property_cards')
   

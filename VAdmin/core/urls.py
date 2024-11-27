@@ -4,7 +4,7 @@ from .views import (PersonListAPIView,PropertyCardAPIView, VehicleAPIView,
                     VehicleEngineListCreateView, VehicleEngineRetrieveUpdateDestroyView,
                     VehicleAccessoriesListCreateView, VehicleAccessoriesRetrieveUpdateDestroyView,
                     ReviewListCreateView, ReviewRetrieveUpdateDestroyView, ReadPropertyCardAPIView,
-                    UserListCreateAPIView)
+                    UserListCreateAPIView, CheckPropertyCardAPIView)
 
 urlpatterns = [
     path("users/", UserListCreateAPIView.as_view(), name='users'),
@@ -18,4 +18,5 @@ urlpatterns = [
     path('reviews/', ReviewListCreateView.as_view(), name='review-list-create'),
     path('reviews/<int:pk>/', ReviewRetrieveUpdateDestroyView.as_view(), name='review-detail'),
     path('read-property-card/', ReadPropertyCardAPIView.as_view(), name='review-detail'),
+    path('check-property-card/', CheckPropertyCardAPIView.as_view(), name='check-property-card'),
 ]
