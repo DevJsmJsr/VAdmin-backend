@@ -4,11 +4,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from typing import IO
 from django.conf import settings
+from rest_framework import status
 import requests
 import json
 import base64
 from core.models import User
-from core.serializers import PersonSerializer, VehicleSerializer, PropertyCardSerializer
+from core.serializers import PersonSerializer, VehicleSerializer, PropertyCardSerializer, UserSerializer
 
 
 class CheckPropertyCardAPIView(APIView):
@@ -35,25 +36,33 @@ class CheckPropertyCardAPIView(APIView):
     response = requests.request("GET", url, headers=headers)
     response.raise_for_status()
     response = response.json()
-    response = settings.PC_EXAMPLE
     return response
   
   def create_person(self, response):
     fields = response['analyzeResult']['documents'][0]['fields']
     identification = fields['id_propietario']['content'].split(' ')
     
-    user = User(username=identification[1], email='newUser@vadmin.com',
-            rol="USER", first_name=fields['nombre_propietario']['content'],
-            password=identification[1])
-    user.save()
+    user_fields = {
+      'username':identification[1], 
+      'email':'newUser@vadmin.com',
+      'rol':"USER",
+      'is_superuser': False,
+      'first_name':fields['nombre_propietario']['content'],
+      'password':identification[1]
+    }
+    user_serializer = UserSerializer(data=user_fields)
+    if user_serializer.is_valid():
+      user = user_serializer.save()
+    else:
+      print(user_serializer.errors)
+      return user_serializer.errors
     
     person_obj = self.create_person_obj(fields, identification[0], identification[1], user)
     pc_obj = self.property_card_obj(fields, person_obj)
     vehicle_obj = self.create_vehicle_obj(fields, pc_obj)
     
     if person_obj and vehicle_obj and pc_obj:
-        return f"Person {person_obj.name} 
-          was created with vehicle {vehicle_obj.plate}, was created!"
+      return f"Person {person_obj.name} was created with vehicle {vehicle_obj.number_plate}, was created!"
     else:
       return "One object was not created"
     
@@ -67,10 +76,11 @@ class CheckPropertyCardAPIView(APIView):
     }
     person_serializer = PersonSerializer(data=person_fields)
     if person_serializer.is_valid():
-      person_obj =person_serializer.save()
+      person_obj = person_serializer.save()
       return person_obj
     else:
       print(person_serializer.errors)
+      return person_serializer.errors
     
   def property_card_obj(self, fields, person_obj):
     property_card_fields = {
@@ -84,6 +94,7 @@ class CheckPropertyCardAPIView(APIView):
       return pc_obj
     else:
       print(pc_serializer.errors)
+      return pc_serializer.errors
 
   def create_vehicle_obj(self, fields, pc_obj):
     vehicle_fields = {
@@ -102,6 +113,7 @@ class CheckPropertyCardAPIView(APIView):
       return vehicle_obj
     else:
       print(vehicle_serializer.errors)
+      return vehicle_serializer.errors
 
 
 
