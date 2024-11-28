@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from typing import IO
 from django.conf import settings
+from django.db import transaction
 from rest_framework import status
 import requests
 import json
@@ -19,7 +20,11 @@ class CheckPropertyCardAPIView(APIView):
     if response:
       response = self.create_person(response)
       return Response({
-        'data': response,
+        'data': {
+          'message': f"Person {response['person_name']} was created with vehicle {response['number_plate']}, was created!",
+          'person_name': response['person_name'],
+          'number_plate': response['number_plate']
+        }
       })
     
     return Response({
@@ -38,6 +43,7 @@ class CheckPropertyCardAPIView(APIView):
     response = response.json()
     return response
   
+  @transaction.atomic
   def create_person(self, response):
     fields = response['analyzeResult']['documents'][0]['fields']
     identification = fields['id_propietario']['content'].split(' ')
@@ -48,10 +54,10 @@ class CheckPropertyCardAPIView(APIView):
       'rol':"USER",
       'is_superuser': False,
       'first_name':fields['nombre_propietario']['content'],
-      'password':identification[1]
+      'password': identification[1]
     }
     user_serializer = UserSerializer(data=user_fields)
-    if user_serializer.is_valid():
+    if user_serializer.is_valid(raise_exception=True):
       user = user_serializer.save()
     else:
       print(user_serializer.errors)
@@ -62,10 +68,12 @@ class CheckPropertyCardAPIView(APIView):
     vehicle_obj = self.create_vehicle_obj(fields, pc_obj)
     
     if person_obj and vehicle_obj and pc_obj:
-      return f"Person {person_obj.name} was created with vehicle {vehicle_obj.number_plate}, was created!"
+      return {
+        'number_plate': vehicle_obj.number_plate,
+        'person_name': person_obj.name
+      }
     else:
       return "One object was not created"
-    
     
   def create_person_obj(self, fields, document_type, document_number, user):
     person_fields = {
@@ -75,7 +83,7 @@ class CheckPropertyCardAPIView(APIView):
       'user_id': user.pk
     }
     person_serializer = PersonSerializer(data=person_fields)
-    if person_serializer.is_valid():
+    if person_serializer.is_valid(raise_exception=True):
       person_obj = person_serializer.save()
       return person_obj
     else:
@@ -89,7 +97,7 @@ class CheckPropertyCardAPIView(APIView):
       }
     
     pc_serializer = PropertyCardSerializer(data=property_card_fields)
-    if pc_serializer.is_valid():
+    if pc_serializer.is_valid(raise_exception=True):
       pc_obj = pc_serializer.save()
       return pc_obj
     else:
@@ -108,7 +116,7 @@ class CheckPropertyCardAPIView(APIView):
     }
     
     vehicle_serializer = VehicleSerializer(data=vehicle_fields)
-    if vehicle_serializer.is_valid():
+    if vehicle_serializer.is_valid(raise_exception=True):
       vehicle_obj = vehicle_serializer.save()
       return vehicle_obj
     else:

@@ -28,3 +28,9 @@ class UserSerializer(serializers.ModelSerializer):
     except exceptions.ValidationError as e:
       raise serializers.ValidationError({"password": list(e.messages)})
     return super(UserSerializer, self).validate(data)
+  
+  def create(self, validated_data):
+    user = super(UserSerializer, self).create(validated_data)
+    user.set_password(validated_data['password'])
+    user.save()
+    return user

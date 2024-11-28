@@ -15,6 +15,7 @@ import boto3
 import datetime
 import os
 import psycopg2.extensions
+from datetime import timedelta
 
 # Environment
 ENV = os.environ['ENV']
@@ -200,6 +201,11 @@ AZURE_SECRET_KEY = os.environ['AZURE_SECRET_KEY']
 AZURE_MODEL_ANALYZER_ENDPOINT = os.environ['AZURE_MODEL_ANALYZER_ENDPOINT']
 AZURE_MODEL_CHECK_ENDPOINT = os.environ['AZURE_MODEL_CHECK_ENDPOINT']
 
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=24),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+}
 
 
 PC_EXAMPLE = {
