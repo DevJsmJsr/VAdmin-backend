@@ -33,13 +33,13 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = ENV != 'prod'
 
-ALLOWED_HOSTS = ['localhost','vrbs8k12vg.execute-api.us-east-1.amazonaws.com']
+ALLOWED_HOSTS = ['localhost','vrbs8k12vg.execute-api.us-east-1.amazonaws.com','https://d3de4hbilu4zlp.cloudfront.net']
 
 # URL FRONTEND
 URL_FRONTEND = os.environ['URL_FRONTEND']
 
 CORS_ORIGIN_WHITELIST = (
-  URL_FRONTEND, 'https://localhost'
+  URL_FRONTEND, 'https://localhost','https://d3de4hbilu4zlp.cloudfront.net'
 )
 
 CORS_ALLOW_HEADERS = list(default_headers) + [
