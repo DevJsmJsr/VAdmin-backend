@@ -1,10 +1,10 @@
 from rest_framework import serializers
 from core.models import PropertyCard
 
-from django.utils.module_loading import import_string
+from core.serializers import PersonSerializer
 
 class PropertyCardSerializer(serializers.ModelSerializer):
-  person = serializers.PrimaryKeyRelatedField(read_only=True)
+  person = PersonSerializer(required=False)
   person_id = serializers.UUIDField(write_only=True)
   vehicle = serializers.PrimaryKeyRelatedField(read_only=True)
   vehicle_id = serializers.IntegerField(write_only=True, required=False)
@@ -13,7 +13,7 @@ class PropertyCardSerializer(serializers.ModelSerializer):
   transit_authority = serializers.CharField(required=False)
   
   class Meta:
-    model = import_string('core.models.PropertyCard')
+    model = PropertyCard
     fields = [
       'property_card_number',
       'issue_date',
