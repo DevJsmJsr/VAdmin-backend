@@ -50,7 +50,7 @@ class CheckPropertyCardAPIView(APIView):
     
     user_fields = {
       'username':identification[1], 
-      'email':'newUser@vadmin.com',
+      'email':f'{identification[1]}@vadmin.com',
       'rol':"USER",
       'is_superuser': False,
       'first_name':fields['nombre_propietario']['content'],

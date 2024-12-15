@@ -6,8 +6,6 @@ from core.serializers import PersonSerializer
 class PropertyCardSerializer(serializers.ModelSerializer):
   person = PersonSerializer(required=False)
   person_id = serializers.UUIDField(write_only=True)
-  vehicle = serializers.PrimaryKeyRelatedField(read_only=True)
-  vehicle_id = serializers.IntegerField(write_only=True, required=False)
   issue_date = serializers.CharField(required=False)
   enrollment_date = serializers.CharField(required=False)
   transit_authority = serializers.CharField(required=False)
@@ -21,6 +19,4 @@ class PropertyCardSerializer(serializers.ModelSerializer):
       'transit_authority',
       'person',
       'person_id',
-      'vehicle',
-      'vehicle_id'
     ]

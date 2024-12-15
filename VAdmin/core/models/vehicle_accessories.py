@@ -1,4 +1,5 @@
 from django.db import models
+from core.models import Vehicle
 
 class VehicleAccessories(models.Model):
   reverse_cam = models.BooleanField(default=False)
@@ -14,4 +15,4 @@ class VehicleAccessories(models.Model):
   anti_theft_system = models.BooleanField(default=False)
   alarm_system = models.BooleanField(default=False)
   remote_start = models.BooleanField(default=False)
-  vehicle = models.OneToOneField('core.Vehicle', on_delete=models.CASCADE, related_name='vehicle_accessories')
+  vehicle = models.OneToOneField(Vehicle, on_delete=models.CASCADE, related_name='vehicle_accessories')
