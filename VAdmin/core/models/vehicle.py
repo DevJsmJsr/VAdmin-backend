@@ -9,9 +9,17 @@ class Vehicle(Auditor):
   EXTRA='EXTRA'
   
   FUEL_CHOICES = [
-    ('GASOLINA', 'GASOLINA'),
-    ('DIESEL', 'DIESEL'),
-    ('EXTRA', 'EXTRA'),
+    (GASOLINA, 'GASOLINA'),
+    (DIESEL, 'DIESEL'),
+    (EXTRA, 'EXTRA'),
+  ]
+  
+  COMPLETED='COMPLETED'
+  UNCOMPLETED='UNCOMPLETED'
+  
+  INITIAL_SCAN_CHOICES = [
+    (COMPLETED, 'COMPLETED'),
+    (UNCOMPLETED, 'UNCOMPLETED'),
   ]
   
   number_plate = models.CharField(max_length=15, unique=True)
@@ -22,5 +30,6 @@ class Vehicle(Auditor):
   doors_number = models.PositiveIntegerField(null=True)
   fuel_type = models.CharField(max_length=20, choices=FUEL_CHOICES)
   kilometric = models.PositiveIntegerField(null=True)
+  initial_scan = models.CharField(max_length=20, default=UNCOMPLETED, choices=INITIAL_SCAN_CHOICES)
   property_card = models.OneToOneField(PropertyCard, on_delete=models.CASCADE, related_name='property_cards_vehicle')
 
