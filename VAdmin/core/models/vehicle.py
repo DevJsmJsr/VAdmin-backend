@@ -27,6 +27,7 @@ class Vehicle(Auditor):
   brand = models.CharField(max_length=50)
   color = models.CharField(max_length=30)
   type_vehicle = models.CharField(max_length=30)
+  transmission_type = models.CharField(max_length=30)
   doors_number = models.PositiveIntegerField(null=True)
   fuel_type = models.CharField(max_length=20, choices=FUEL_CHOICES)
   kilometric = models.PositiveIntegerField(null=True)

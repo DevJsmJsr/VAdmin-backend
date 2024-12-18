@@ -9,10 +9,12 @@ class PropertyCardSerializer(serializers.ModelSerializer):
   issue_date = serializers.CharField(required=False)
   enrollment_date = serializers.CharField(required=False)
   transit_authority = serializers.CharField(required=False)
+  pk = serializers.IntegerField(required=False)
   
   class Meta:
     model = PropertyCard
     fields = [
+      'pk',
       'property_card_number',
       'issue_date',
       'enrollment_date',

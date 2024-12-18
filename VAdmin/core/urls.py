@@ -4,13 +4,14 @@ from .views import (PersonListAPIView,PropertyCardAPIView, VehicleAPIView,
                     VehicleEngineListCreateView, VehicleEngineRetrieveUpdateDestroyView,
                     VehicleAccessoriesListCreateView, VehicleAccessoriesRetrieveUpdateDestroyView,
                     ReviewListCreateView, ReviewRetrieveUpdateDestroyView, ReadPropertyCardAPIView,
-                    UserListCreateAPIView, CheckPropertyCardAPIView)
+                    UserListCreateAPIView, CheckPropertyCardAPIView, VehicleUpdateRegisterComponentsAPIView)
 
 urlpatterns = [
     path("users/", UserListCreateAPIView.as_view(), name='users'),
     path('persons/', PersonListAPIView.as_view(), name='persons'),
     path('property-cards/', PropertyCardAPIView.as_view(), name='property-cards'),
     path('vehicle/', VehicleAPIView.as_view(), name='vehicle'),
+    path('register-vehicle-components/<int:pk>/', VehicleUpdateRegisterComponentsAPIView.as_view(), name='register-vehicle-components'),
     path('vehicle-engines/', VehicleEngineListCreateView.as_view(), name='vehicle-engine-list-create'),
     path('vehicle-engines/<int:pk>/', VehicleEngineRetrieveUpdateDestroyView.as_view(), name='vehicle-engine-detail'),
     path('vehicle-accessories/', VehicleAccessoriesListCreateView.as_view(), name='vehicle-accessories-list-create'),

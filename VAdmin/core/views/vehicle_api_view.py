@@ -5,3 +5,7 @@ from core.serializers import VehicleSerializer
 class VehicleAPIView(generics.ListCreateAPIView):
   queryset = Vehicle.objects.all()
   serializer_class = VehicleSerializer
+
+class VehicleUpdateRegisterComponentsAPIView(generics.RetrieveUpdateAPIView):
+  queryset = Vehicle.objects.all()
+  serializer_class = VehicleSerializer
